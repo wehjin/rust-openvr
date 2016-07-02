@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `EVREventType` enum in crate `openvr_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, EVREventType">
+
+    <title>openvr_sys::EVREventType - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>openvr_sys</a></p><script>window.sidebarCurrent = {name: 'EVREventType', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>openvr_sys</a>::<wbr><a class='enum' href=''>EVREventType</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-627' class='srclink' href='../src/openvr_sys/lib.rs.html#236-334' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum EVREventType {
+    EVREventType_VREvent_None,
+    EVREventType_VREvent_TrackedDeviceActivated,
+    EVREventType_VREvent_TrackedDeviceDeactivated,
+    EVREventType_VREvent_TrackedDeviceUpdated,
+    EVREventType_VREvent_TrackedDeviceUserInteractionStarted,
+    EVREventType_VREvent_TrackedDeviceUserInteractionEnded,
+    EVREventType_VREvent_IpdChanged,
+    EVREventType_VREvent_EnterStandbyMode,
+    EVREventType_VREvent_LeaveStandbyMode,
+    EVREventType_VREvent_TrackedDeviceRoleChanged,
+    EVREventType_VREvent_ButtonPress,
+    EVREventType_VREvent_ButtonUnpress,
+    EVREventType_VREvent_ButtonTouch,
+    EVREventType_VREvent_ButtonUntouch,
+    EVREventType_VREvent_MouseMove,
+    EVREventType_VREvent_MouseButtonDown,
+    EVREventType_VREvent_MouseButtonUp,
+    EVREventType_VREvent_FocusEnter,
+    EVREventType_VREvent_FocusLeave,
+    EVREventType_VREvent_Scroll,
+    EVREventType_VREvent_TouchPadMove,
+    EVREventType_VREvent_InputFocusCaptured,
+    EVREventType_VREvent_InputFocusReleased,
+    EVREventType_VREvent_SceneFocusLost,
+    EVREventType_VREvent_SceneFocusGained,
+    EVREventType_VREvent_SceneApplicationChanged,
+    EVREventType_VREvent_SceneFocusChanged,
+    EVREventType_VREvent_InputFocusChanged,
+    EVREventType_VREvent_SceneApplicationSecondaryRenderingStarted,
+    EVREventType_VREvent_HideRenderModels,
+    EVREventType_VREvent_ShowRenderModels,
+    EVREventType_VREvent_OverlayShown,
+    EVREventType_VREvent_OverlayHidden,
+    EVREventType_VREvent_DashboardActivated,
+    EVREventType_VREvent_DashboardDeactivated,
+    EVREventType_VREvent_DashboardThumbSelected,
+    EVREventType_VREvent_DashboardRequested,
+    EVREventType_VREvent_ResetDashboard,
+    EVREventType_VREvent_RenderToast,
+    EVREventType_VREvent_ImageLoaded,
+    EVREventType_VREvent_ShowKeyboard,
+    EVREventType_VREvent_HideKeyboard,
+    EVREventType_VREvent_OverlayGamepadFocusGained,
+    EVREventType_VREvent_OverlayGamepadFocusLost,
+    EVREventType_VREvent_OverlaySharedTextureChanged,
+    EVREventType_VREvent_DashboardGuideButtonDown,
+    EVREventType_VREvent_DashboardGuideButtonUp,
+    EVREventType_VREvent_ScreenshotTriggered,
+    EVREventType_VREvent_ImageFailed,
+    EVREventType_VREvent_RequestScreenshot,
+    EVREventType_VREvent_ScreenshotTaken,
+    EVREventType_VREvent_ScreenshotFailed,
+    EVREventType_VREvent_SubmitScreenshotToDashboard,
+    EVREventType_VREvent_Notification_Shown,
+    EVREventType_VREvent_Notification_Hidden,
+    EVREventType_VREvent_Notification_BeginInteraction,
+    EVREventType_VREvent_Notification_Destroyed,
+    EVREventType_VREvent_Quit,
+    EVREventType_VREvent_ProcessQuit,
+    EVREventType_VREvent_QuitAborted_UserPrompt,
+    EVREventType_VREvent_QuitAcknowledged,
+    EVREventType_VREvent_DriverRequestedQuit,
+    EVREventType_VREvent_ChaperoneDataHasChanged,
+    EVREventType_VREvent_ChaperoneUniverseHasChanged,
+    EVREventType_VREvent_ChaperoneTempDataHasChanged,
+    EVREventType_VREvent_ChaperoneSettingsHaveChanged,
+    EVREventType_VREvent_SeatedZeroPoseReset,
+    EVREventType_VREvent_AudioSettingsHaveChanged,
+    EVREventType_VREvent_BackgroundSettingHasChanged,
+    EVREventType_VREvent_CameraSettingsHaveChanged,
+    EVREventType_VREvent_ReprojectionSettingHasChanged,
+    EVREventType_VREvent_ModelSkinSettingsHaveChanged,
+    EVREventType_VREvent_EnvironmentSettingsHaveChanged,
+    EVREventType_VREvent_StatusUpdate,
+    EVREventType_VREvent_MCImageUpdated,
+    EVREventType_VREvent_FirmwareUpdateStarted,
+    EVREventType_VREvent_FirmwareUpdateFinished,
+    EVREventType_VREvent_KeyboardClosed,
+    EVREventType_VREvent_KeyboardCharInput,
+    EVREventType_VREvent_KeyboardDone,
+    EVREventType_VREvent_ApplicationTransitionStarted,
+    EVREventType_VREvent_ApplicationTransitionAborted,
+    EVREventType_VREvent_ApplicationTransitionNewAppStarted,
+    EVREventType_VREvent_ApplicationListUpdated,
+    EVREventType_VREvent_Compositor_MirrorWindowShown,
+    EVREventType_VREvent_Compositor_MirrorWindowHidden,
+    EVREventType_VREvent_Compositor_ChaperoneBoundsShown,
+    EVREventType_VREvent_Compositor_ChaperoneBoundsHidden,
+    EVREventType_VREvent_TrackedCamera_StartVideoStream,
+    EVREventType_VREvent_TrackedCamera_StopVideoStream,
+    EVREventType_VREvent_TrackedCamera_PauseVideoStream,
+    EVREventType_VREvent_TrackedCamera_ResumeVideoStream,
+    EVREventType_VREvent_PerformanceTest_EnableCapture,
+    EVREventType_VREvent_PerformanceTest_DisableCapture,
+    EVREventType_VREvent_PerformanceTest_FidelityLevel,
+    EVREventType_VREvent_VendorSpecific_Reserved_Start,
+    EVREventType_VREvent_VendorSpecific_Reserved_End,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.EVREventType_VREvent_None' class='variant'><code>EVREventType_VREvent_None</code></span><span id='variant.EVREventType_VREvent_TrackedDeviceActivated' class='variant'><code>EVREventType_VREvent_TrackedDeviceActivated</code></span><span id='variant.EVREventType_VREvent_TrackedDeviceDeactivated' class='variant'><code>EVREventType_VREvent_TrackedDeviceDeactivated</code></span><span id='variant.EVREventType_VREvent_TrackedDeviceUpdated' class='variant'><code>EVREventType_VREvent_TrackedDeviceUpdated</code></span><span id='variant.EVREventType_VREvent_TrackedDeviceUserInteractionStarted' class='variant'><code>EVREventType_VREvent_TrackedDeviceUserInteractionStarted</code></span><span id='variant.EVREventType_VREvent_TrackedDeviceUserInteractionEnded' class='variant'><code>EVREventType_VREvent_TrackedDeviceUserInteractionEnded</code></span><span id='variant.EVREventType_VREvent_IpdChanged' class='variant'><code>EVREventType_VREvent_IpdChanged</code></span><span id='variant.EVREventType_VREvent_EnterStandbyMode' class='variant'><code>EVREventType_VREvent_EnterStandbyMode</code></span><span id='variant.EVREventType_VREvent_LeaveStandbyMode' class='variant'><code>EVREventType_VREvent_LeaveStandbyMode</code></span><span id='variant.EVREventType_VREvent_TrackedDeviceRoleChanged' class='variant'><code>EVREventType_VREvent_TrackedDeviceRoleChanged</code></span><span id='variant.EVREventType_VREvent_ButtonPress' class='variant'><code>EVREventType_VREvent_ButtonPress</code></span><span id='variant.EVREventType_VREvent_ButtonUnpress' class='variant'><code>EVREventType_VREvent_ButtonUnpress</code></span><span id='variant.EVREventType_VREvent_ButtonTouch' class='variant'><code>EVREventType_VREvent_ButtonTouch</code></span><span id='variant.EVREventType_VREvent_ButtonUntouch' class='variant'><code>EVREventType_VREvent_ButtonUntouch</code></span><span id='variant.EVREventType_VREvent_MouseMove' class='variant'><code>EVREventType_VREvent_MouseMove</code></span><span id='variant.EVREventType_VREvent_MouseButtonDown' class='variant'><code>EVREventType_VREvent_MouseButtonDown</code></span><span id='variant.EVREventType_VREvent_MouseButtonUp' class='variant'><code>EVREventType_VREvent_MouseButtonUp</code></span><span id='variant.EVREventType_VREvent_FocusEnter' class='variant'><code>EVREventType_VREvent_FocusEnter</code></span><span id='variant.EVREventType_VREvent_FocusLeave' class='variant'><code>EVREventType_VREvent_FocusLeave</code></span><span id='variant.EVREventType_VREvent_Scroll' class='variant'><code>EVREventType_VREvent_Scroll</code></span><span id='variant.EVREventType_VREvent_TouchPadMove' class='variant'><code>EVREventType_VREvent_TouchPadMove</code></span><span id='variant.EVREventType_VREvent_InputFocusCaptured' class='variant'><code>EVREventType_VREvent_InputFocusCaptured</code></span><span id='variant.EVREventType_VREvent_InputFocusReleased' class='variant'><code>EVREventType_VREvent_InputFocusReleased</code></span><span id='variant.EVREventType_VREvent_SceneFocusLost' class='variant'><code>EVREventType_VREvent_SceneFocusLost</code></span><span id='variant.EVREventType_VREvent_SceneFocusGained' class='variant'><code>EVREventType_VREvent_SceneFocusGained</code></span><span id='variant.EVREventType_VREvent_SceneApplicationChanged' class='variant'><code>EVREventType_VREvent_SceneApplicationChanged</code></span><span id='variant.EVREventType_VREvent_SceneFocusChanged' class='variant'><code>EVREventType_VREvent_SceneFocusChanged</code></span><span id='variant.EVREventType_VREvent_InputFocusChanged' class='variant'><code>EVREventType_VREvent_InputFocusChanged</code></span><span id='variant.EVREventType_VREvent_SceneApplicationSecondaryRenderingStarted' class='variant'><code>EVREventType_VREvent_SceneApplicationSecondaryRenderingStarted</code></span><span id='variant.EVREventType_VREvent_HideRenderModels' class='variant'><code>EVREventType_VREvent_HideRenderModels</code></span><span id='variant.EVREventType_VREvent_ShowRenderModels' class='variant'><code>EVREventType_VREvent_ShowRenderModels</code></span><span id='variant.EVREventType_VREvent_OverlayShown' class='variant'><code>EVREventType_VREvent_OverlayShown</code></span><span id='variant.EVREventType_VREvent_OverlayHidden' class='variant'><code>EVREventType_VREvent_OverlayHidden</code></span><span id='variant.EVREventType_VREvent_DashboardActivated' class='variant'><code>EVREventType_VREvent_DashboardActivated</code></span><span id='variant.EVREventType_VREvent_DashboardDeactivated' class='variant'><code>EVREventType_VREvent_DashboardDeactivated</code></span><span id='variant.EVREventType_VREvent_DashboardThumbSelected' class='variant'><code>EVREventType_VREvent_DashboardThumbSelected</code></span><span id='variant.EVREventType_VREvent_DashboardRequested' class='variant'><code>EVREventType_VREvent_DashboardRequested</code></span><span id='variant.EVREventType_VREvent_ResetDashboard' class='variant'><code>EVREventType_VREvent_ResetDashboard</code></span><span id='variant.EVREventType_VREvent_RenderToast' class='variant'><code>EVREventType_VREvent_RenderToast</code></span><span id='variant.EVREventType_VREvent_ImageLoaded' class='variant'><code>EVREventType_VREvent_ImageLoaded</code></span><span id='variant.EVREventType_VREvent_ShowKeyboard' class='variant'><code>EVREventType_VREvent_ShowKeyboard</code></span><span id='variant.EVREventType_VREvent_HideKeyboard' class='variant'><code>EVREventType_VREvent_HideKeyboard</code></span><span id='variant.EVREventType_VREvent_OverlayGamepadFocusGained' class='variant'><code>EVREventType_VREvent_OverlayGamepadFocusGained</code></span><span id='variant.EVREventType_VREvent_OverlayGamepadFocusLost' class='variant'><code>EVREventType_VREvent_OverlayGamepadFocusLost</code></span><span id='variant.EVREventType_VREvent_OverlaySharedTextureChanged' class='variant'><code>EVREventType_VREvent_OverlaySharedTextureChanged</code></span><span id='variant.EVREventType_VREvent_DashboardGuideButtonDown' class='variant'><code>EVREventType_VREvent_DashboardGuideButtonDown</code></span><span id='variant.EVREventType_VREvent_DashboardGuideButtonUp' class='variant'><code>EVREventType_VREvent_DashboardGuideButtonUp</code></span><span id='variant.EVREventType_VREvent_ScreenshotTriggered' class='variant'><code>EVREventType_VREvent_ScreenshotTriggered</code></span><span id='variant.EVREventType_VREvent_ImageFailed' class='variant'><code>EVREventType_VREvent_ImageFailed</code></span><span id='variant.EVREventType_VREvent_RequestScreenshot' class='variant'><code>EVREventType_VREvent_RequestScreenshot</code></span><span id='variant.EVREventType_VREvent_ScreenshotTaken' class='variant'><code>EVREventType_VREvent_ScreenshotTaken</code></span><span id='variant.EVREventType_VREvent_ScreenshotFailed' class='variant'><code>EVREventType_VREvent_ScreenshotFailed</code></span><span id='variant.EVREventType_VREvent_SubmitScreenshotToDashboard' class='variant'><code>EVREventType_VREvent_SubmitScreenshotToDashboard</code></span><span id='variant.EVREventType_VREvent_Notification_Shown' class='variant'><code>EVREventType_VREvent_Notification_Shown</code></span><span id='variant.EVREventType_VREvent_Notification_Hidden' class='variant'><code>EVREventType_VREvent_Notification_Hidden</code></span><span id='variant.EVREventType_VREvent_Notification_BeginInteraction' class='variant'><code>EVREventType_VREvent_Notification_BeginInteraction</code></span><span id='variant.EVREventType_VREvent_Notification_Destroyed' class='variant'><code>EVREventType_VREvent_Notification_Destroyed</code></span><span id='variant.EVREventType_VREvent_Quit' class='variant'><code>EVREventType_VREvent_Quit</code></span><span id='variant.EVREventType_VREvent_ProcessQuit' class='variant'><code>EVREventType_VREvent_ProcessQuit</code></span><span id='variant.EVREventType_VREvent_QuitAborted_UserPrompt' class='variant'><code>EVREventType_VREvent_QuitAborted_UserPrompt</code></span><span id='variant.EVREventType_VREvent_QuitAcknowledged' class='variant'><code>EVREventType_VREvent_QuitAcknowledged</code></span><span id='variant.EVREventType_VREvent_DriverRequestedQuit' class='variant'><code>EVREventType_VREvent_DriverRequestedQuit</code></span><span id='variant.EVREventType_VREvent_ChaperoneDataHasChanged' class='variant'><code>EVREventType_VREvent_ChaperoneDataHasChanged</code></span><span id='variant.EVREventType_VREvent_ChaperoneUniverseHasChanged' class='variant'><code>EVREventType_VREvent_ChaperoneUniverseHasChanged</code></span><span id='variant.EVREventType_VREvent_ChaperoneTempDataHasChanged' class='variant'><code>EVREventType_VREvent_ChaperoneTempDataHasChanged</code></span><span id='variant.EVREventType_VREvent_ChaperoneSettingsHaveChanged' class='variant'><code>EVREventType_VREvent_ChaperoneSettingsHaveChanged</code></span><span id='variant.EVREventType_VREvent_SeatedZeroPoseReset' class='variant'><code>EVREventType_VREvent_SeatedZeroPoseReset</code></span><span id='variant.EVREventType_VREvent_AudioSettingsHaveChanged' class='variant'><code>EVREventType_VREvent_AudioSettingsHaveChanged</code></span><span id='variant.EVREventType_VREvent_BackgroundSettingHasChanged' class='variant'><code>EVREventType_VREvent_BackgroundSettingHasChanged</code></span><span id='variant.EVREventType_VREvent_CameraSettingsHaveChanged' class='variant'><code>EVREventType_VREvent_CameraSettingsHaveChanged</code></span><span id='variant.EVREventType_VREvent_ReprojectionSettingHasChanged' class='variant'><code>EVREventType_VREvent_ReprojectionSettingHasChanged</code></span><span id='variant.EVREventType_VREvent_ModelSkinSettingsHaveChanged' class='variant'><code>EVREventType_VREvent_ModelSkinSettingsHaveChanged</code></span><span id='variant.EVREventType_VREvent_EnvironmentSettingsHaveChanged' class='variant'><code>EVREventType_VREvent_EnvironmentSettingsHaveChanged</code></span><span id='variant.EVREventType_VREvent_StatusUpdate' class='variant'><code>EVREventType_VREvent_StatusUpdate</code></span><span id='variant.EVREventType_VREvent_MCImageUpdated' class='variant'><code>EVREventType_VREvent_MCImageUpdated</code></span><span id='variant.EVREventType_VREvent_FirmwareUpdateStarted' class='variant'><code>EVREventType_VREvent_FirmwareUpdateStarted</code></span><span id='variant.EVREventType_VREvent_FirmwareUpdateFinished' class='variant'><code>EVREventType_VREvent_FirmwareUpdateFinished</code></span><span id='variant.EVREventType_VREvent_KeyboardClosed' class='variant'><code>EVREventType_VREvent_KeyboardClosed</code></span><span id='variant.EVREventType_VREvent_KeyboardCharInput' class='variant'><code>EVREventType_VREvent_KeyboardCharInput</code></span><span id='variant.EVREventType_VREvent_KeyboardDone' class='variant'><code>EVREventType_VREvent_KeyboardDone</code></span><span id='variant.EVREventType_VREvent_ApplicationTransitionStarted' class='variant'><code>EVREventType_VREvent_ApplicationTransitionStarted</code></span><span id='variant.EVREventType_VREvent_ApplicationTransitionAborted' class='variant'><code>EVREventType_VREvent_ApplicationTransitionAborted</code></span><span id='variant.EVREventType_VREvent_ApplicationTransitionNewAppStarted' class='variant'><code>EVREventType_VREvent_ApplicationTransitionNewAppStarted</code></span><span id='variant.EVREventType_VREvent_ApplicationListUpdated' class='variant'><code>EVREventType_VREvent_ApplicationListUpdated</code></span><span id='variant.EVREventType_VREvent_Compositor_MirrorWindowShown' class='variant'><code>EVREventType_VREvent_Compositor_MirrorWindowShown</code></span><span id='variant.EVREventType_VREvent_Compositor_MirrorWindowHidden' class='variant'><code>EVREventType_VREvent_Compositor_MirrorWindowHidden</code></span><span id='variant.EVREventType_VREvent_Compositor_ChaperoneBoundsShown' class='variant'><code>EVREventType_VREvent_Compositor_ChaperoneBoundsShown</code></span><span id='variant.EVREventType_VREvent_Compositor_ChaperoneBoundsHidden' class='variant'><code>EVREventType_VREvent_Compositor_ChaperoneBoundsHidden</code></span><span id='variant.EVREventType_VREvent_TrackedCamera_StartVideoStream' class='variant'><code>EVREventType_VREvent_TrackedCamera_StartVideoStream</code></span><span id='variant.EVREventType_VREvent_TrackedCamera_StopVideoStream' class='variant'><code>EVREventType_VREvent_TrackedCamera_StopVideoStream</code></span><span id='variant.EVREventType_VREvent_TrackedCamera_PauseVideoStream' class='variant'><code>EVREventType_VREvent_TrackedCamera_PauseVideoStream</code></span><span id='variant.EVREventType_VREvent_TrackedCamera_ResumeVideoStream' class='variant'><code>EVREventType_VREvent_TrackedCamera_ResumeVideoStream</code></span><span id='variant.EVREventType_VREvent_PerformanceTest_EnableCapture' class='variant'><code>EVREventType_VREvent_PerformanceTest_EnableCapture</code></span><span id='variant.EVREventType_VREvent_PerformanceTest_DisableCapture' class='variant'><code>EVREventType_VREvent_PerformanceTest_DisableCapture</code></span><span id='variant.EVREventType_VREvent_PerformanceTest_FidelityLevel' class='variant'><code>EVREventType_VREvent_PerformanceTest_FidelityLevel</code></span><span id='variant.EVREventType_VREvent_VendorSpecific_Reserved_Start' class='variant'><code>EVREventType_VREvent_VendorSpecific_Reserved_Start</code></span><span id='variant.EVREventType_VREvent_VendorSpecific_Reserved_End' class='variant'><code>EVREventType_VREvent_VendorSpecific_Reserved_End</code></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../openvr_sys/enum.EVREventType.html' title='openvr_sys::EVREventType'>EVREventType</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-522' class='srclink' href='../src/openvr_sys/lib.rs.html#233' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../openvr_sys/enum.EVREventType.html' title='openvr_sys::EVREventType'>EVREventType</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../openvr_sys/enum.EVREventType.html' title='openvr_sys::EVREventType'>EVREventType</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-525' class='srclink' href='../src/openvr_sys/lib.rs.html#233' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../openvr_sys/enum.EVREventType.html' title='openvr_sys::EVREventType'>EVREventType</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-526' class='srclink' href='../src/openvr_sys/lib.rs.html#235' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "openvr_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

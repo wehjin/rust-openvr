@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `EVRInitError` enum in crate `openvr_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, EVRInitError">
+
+    <title>openvr_sys::EVRInitError - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>openvr_sys</a></p><script>window.sidebarCurrent = {name: 'EVRInitError', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>openvr_sys</a>::<wbr><a class='enum' href=''>EVRInitError</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1186' class='srclink' href='../src/openvr_sys/lib.rs.html#462-533' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum EVRInitError {
+    EVRInitError_VRInitError_None,
+    EVRInitError_VRInitError_Unknown,
+    EVRInitError_VRInitError_Init_InstallationNotFound,
+    EVRInitError_VRInitError_Init_InstallationCorrupt,
+    EVRInitError_VRInitError_Init_VRClientDLLNotFound,
+    EVRInitError_VRInitError_Init_FileNotFound,
+    EVRInitError_VRInitError_Init_FactoryNotFound,
+    EVRInitError_VRInitError_Init_InterfaceNotFound,
+    EVRInitError_VRInitError_Init_InvalidInterface,
+    EVRInitError_VRInitError_Init_UserConfigDirectoryInvalid,
+    EVRInitError_VRInitError_Init_HmdNotFound,
+    EVRInitError_VRInitError_Init_NotInitialized,
+    EVRInitError_VRInitError_Init_PathRegistryNotFound,
+    EVRInitError_VRInitError_Init_NoConfigPath,
+    EVRInitError_VRInitError_Init_NoLogPath,
+    EVRInitError_VRInitError_Init_PathRegistryNotWritable,
+    EVRInitError_VRInitError_Init_AppInfoInitFailed,
+    EVRInitError_VRInitError_Init_Retry,
+    EVRInitError_VRInitError_Init_InitCanceledByUser,
+    EVRInitError_VRInitError_Init_AnotherAppLaunching,
+    EVRInitError_VRInitError_Init_SettingsInitFailed,
+    EVRInitError_VRInitError_Init_ShuttingDown,
+    EVRInitError_VRInitError_Init_TooManyObjects,
+    EVRInitError_VRInitError_Init_NoServerForBackgroundApp,
+    EVRInitError_VRInitError_Init_NotSupportedWithCompositor,
+    EVRInitError_VRInitError_Init_NotAvailableToUtilityApps,
+    EVRInitError_VRInitError_Init_Internal,
+    EVRInitError_VRInitError_Driver_Failed,
+    EVRInitError_VRInitError_Driver_Unknown,
+    EVRInitError_VRInitError_Driver_HmdUnknown,
+    EVRInitError_VRInitError_Driver_NotLoaded,
+    EVRInitError_VRInitError_Driver_RuntimeOutOfDate,
+    EVRInitError_VRInitError_Driver_HmdInUse,
+    EVRInitError_VRInitError_Driver_NotCalibrated,
+    EVRInitError_VRInitError_Driver_CalibrationInvalid,
+    EVRInitError_VRInitError_Driver_HmdDisplayNotFound,
+    EVRInitError_VRInitError_IPC_ServerInitFailed,
+    EVRInitError_VRInitError_IPC_ConnectFailed,
+    EVRInitError_VRInitError_IPC_SharedStateInitFailed,
+    EVRInitError_VRInitError_IPC_CompositorInitFailed,
+    EVRInitError_VRInitError_IPC_MutexInitFailed,
+    EVRInitError_VRInitError_IPC_Failed,
+    EVRInitError_VRInitError_Compositor_Failed,
+    EVRInitError_VRInitError_Compositor_D3D11HardwareRequired,
+    EVRInitError_VRInitError_Compositor_FirmwareRequiresUpdate,
+    EVRInitError_VRInitError_Compositor_OverlayInitFailed,
+    EVRInitError_VRInitError_Compositor_ScreenshotsInitFailed,
+    EVRInitError_VRInitError_VendorSpecific_UnableToConnectToOculusRuntime,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_CantOpenDevice,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToRequestConfigStart,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_NoStoredConfig,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigTooBig,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigTooSmall,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToInitZLib,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_CantReadFirmwareVersion,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToSendUserDataStart,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataStart,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataNext,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_UserDataAddressRange,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_UserDataError,
+    EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigFailedSanityCheck,
+    EVRInitError_VRInitError_Steam_SteamInstallationNotFound,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.EVRInitError_VRInitError_None' class='variant'><code>EVRInitError_VRInitError_None</code></span><span id='variant.EVRInitError_VRInitError_Unknown' class='variant'><code>EVRInitError_VRInitError_Unknown</code></span><span id='variant.EVRInitError_VRInitError_Init_InstallationNotFound' class='variant'><code>EVRInitError_VRInitError_Init_InstallationNotFound</code></span><span id='variant.EVRInitError_VRInitError_Init_InstallationCorrupt' class='variant'><code>EVRInitError_VRInitError_Init_InstallationCorrupt</code></span><span id='variant.EVRInitError_VRInitError_Init_VRClientDLLNotFound' class='variant'><code>EVRInitError_VRInitError_Init_VRClientDLLNotFound</code></span><span id='variant.EVRInitError_VRInitError_Init_FileNotFound' class='variant'><code>EVRInitError_VRInitError_Init_FileNotFound</code></span><span id='variant.EVRInitError_VRInitError_Init_FactoryNotFound' class='variant'><code>EVRInitError_VRInitError_Init_FactoryNotFound</code></span><span id='variant.EVRInitError_VRInitError_Init_InterfaceNotFound' class='variant'><code>EVRInitError_VRInitError_Init_InterfaceNotFound</code></span><span id='variant.EVRInitError_VRInitError_Init_InvalidInterface' class='variant'><code>EVRInitError_VRInitError_Init_InvalidInterface</code></span><span id='variant.EVRInitError_VRInitError_Init_UserConfigDirectoryInvalid' class='variant'><code>EVRInitError_VRInitError_Init_UserConfigDirectoryInvalid</code></span><span id='variant.EVRInitError_VRInitError_Init_HmdNotFound' class='variant'><code>EVRInitError_VRInitError_Init_HmdNotFound</code></span><span id='variant.EVRInitError_VRInitError_Init_NotInitialized' class='variant'><code>EVRInitError_VRInitError_Init_NotInitialized</code></span><span id='variant.EVRInitError_VRInitError_Init_PathRegistryNotFound' class='variant'><code>EVRInitError_VRInitError_Init_PathRegistryNotFound</code></span><span id='variant.EVRInitError_VRInitError_Init_NoConfigPath' class='variant'><code>EVRInitError_VRInitError_Init_NoConfigPath</code></span><span id='variant.EVRInitError_VRInitError_Init_NoLogPath' class='variant'><code>EVRInitError_VRInitError_Init_NoLogPath</code></span><span id='variant.EVRInitError_VRInitError_Init_PathRegistryNotWritable' class='variant'><code>EVRInitError_VRInitError_Init_PathRegistryNotWritable</code></span><span id='variant.EVRInitError_VRInitError_Init_AppInfoInitFailed' class='variant'><code>EVRInitError_VRInitError_Init_AppInfoInitFailed</code></span><span id='variant.EVRInitError_VRInitError_Init_Retry' class='variant'><code>EVRInitError_VRInitError_Init_Retry</code></span><span id='variant.EVRInitError_VRInitError_Init_InitCanceledByUser' class='variant'><code>EVRInitError_VRInitError_Init_InitCanceledByUser</code></span><span id='variant.EVRInitError_VRInitError_Init_AnotherAppLaunching' class='variant'><code>EVRInitError_VRInitError_Init_AnotherAppLaunching</code></span><span id='variant.EVRInitError_VRInitError_Init_SettingsInitFailed' class='variant'><code>EVRInitError_VRInitError_Init_SettingsInitFailed</code></span><span id='variant.EVRInitError_VRInitError_Init_ShuttingDown' class='variant'><code>EVRInitError_VRInitError_Init_ShuttingDown</code></span><span id='variant.EVRInitError_VRInitError_Init_TooManyObjects' class='variant'><code>EVRInitError_VRInitError_Init_TooManyObjects</code></span><span id='variant.EVRInitError_VRInitError_Init_NoServerForBackgroundApp' class='variant'><code>EVRInitError_VRInitError_Init_NoServerForBackgroundApp</code></span><span id='variant.EVRInitError_VRInitError_Init_NotSupportedWithCompositor' class='variant'><code>EVRInitError_VRInitError_Init_NotSupportedWithCompositor</code></span><span id='variant.EVRInitError_VRInitError_Init_NotAvailableToUtilityApps' class='variant'><code>EVRInitError_VRInitError_Init_NotAvailableToUtilityApps</code></span><span id='variant.EVRInitError_VRInitError_Init_Internal' class='variant'><code>EVRInitError_VRInitError_Init_Internal</code></span><span id='variant.EVRInitError_VRInitError_Driver_Failed' class='variant'><code>EVRInitError_VRInitError_Driver_Failed</code></span><span id='variant.EVRInitError_VRInitError_Driver_Unknown' class='variant'><code>EVRInitError_VRInitError_Driver_Unknown</code></span><span id='variant.EVRInitError_VRInitError_Driver_HmdUnknown' class='variant'><code>EVRInitError_VRInitError_Driver_HmdUnknown</code></span><span id='variant.EVRInitError_VRInitError_Driver_NotLoaded' class='variant'><code>EVRInitError_VRInitError_Driver_NotLoaded</code></span><span id='variant.EVRInitError_VRInitError_Driver_RuntimeOutOfDate' class='variant'><code>EVRInitError_VRInitError_Driver_RuntimeOutOfDate</code></span><span id='variant.EVRInitError_VRInitError_Driver_HmdInUse' class='variant'><code>EVRInitError_VRInitError_Driver_HmdInUse</code></span><span id='variant.EVRInitError_VRInitError_Driver_NotCalibrated' class='variant'><code>EVRInitError_VRInitError_Driver_NotCalibrated</code></span><span id='variant.EVRInitError_VRInitError_Driver_CalibrationInvalid' class='variant'><code>EVRInitError_VRInitError_Driver_CalibrationInvalid</code></span><span id='variant.EVRInitError_VRInitError_Driver_HmdDisplayNotFound' class='variant'><code>EVRInitError_VRInitError_Driver_HmdDisplayNotFound</code></span><span id='variant.EVRInitError_VRInitError_IPC_ServerInitFailed' class='variant'><code>EVRInitError_VRInitError_IPC_ServerInitFailed</code></span><span id='variant.EVRInitError_VRInitError_IPC_ConnectFailed' class='variant'><code>EVRInitError_VRInitError_IPC_ConnectFailed</code></span><span id='variant.EVRInitError_VRInitError_IPC_SharedStateInitFailed' class='variant'><code>EVRInitError_VRInitError_IPC_SharedStateInitFailed</code></span><span id='variant.EVRInitError_VRInitError_IPC_CompositorInitFailed' class='variant'><code>EVRInitError_VRInitError_IPC_CompositorInitFailed</code></span><span id='variant.EVRInitError_VRInitError_IPC_MutexInitFailed' class='variant'><code>EVRInitError_VRInitError_IPC_MutexInitFailed</code></span><span id='variant.EVRInitError_VRInitError_IPC_Failed' class='variant'><code>EVRInitError_VRInitError_IPC_Failed</code></span><span id='variant.EVRInitError_VRInitError_Compositor_Failed' class='variant'><code>EVRInitError_VRInitError_Compositor_Failed</code></span><span id='variant.EVRInitError_VRInitError_Compositor_D3D11HardwareRequired' class='variant'><code>EVRInitError_VRInitError_Compositor_D3D11HardwareRequired</code></span><span id='variant.EVRInitError_VRInitError_Compositor_FirmwareRequiresUpdate' class='variant'><code>EVRInitError_VRInitError_Compositor_FirmwareRequiresUpdate</code></span><span id='variant.EVRInitError_VRInitError_Compositor_OverlayInitFailed' class='variant'><code>EVRInitError_VRInitError_Compositor_OverlayInitFailed</code></span><span id='variant.EVRInitError_VRInitError_Compositor_ScreenshotsInitFailed' class='variant'><code>EVRInitError_VRInitError_Compositor_ScreenshotsInitFailed</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_UnableToConnectToOculusRuntime' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_UnableToConnectToOculusRuntime</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_CantOpenDevice' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_CantOpenDevice</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToRequestConfigStart' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToRequestConfigStart</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_NoStoredConfig' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_NoStoredConfig</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigTooBig' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigTooBig</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigTooSmall' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigTooSmall</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToInitZLib' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToInitZLib</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_CantReadFirmwareVersion' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_CantReadFirmwareVersion</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToSendUserDataStart' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToSendUserDataStart</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataStart' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataStart</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataNext' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataNext</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_UserDataAddressRange' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_UserDataAddressRange</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_UserDataError' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_UserDataError</code></span><span id='variant.EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigFailedSanityCheck' class='variant'><code>EVRInitError_VRInitError_VendorSpecific_HmdFound_ConfigFailedSanityCheck</code></span><span id='variant.EVRInitError_VRInitError_Steam_SteamInstallationNotFound' class='variant'><code>EVRInitError_VRInitError_Steam_SteamInstallationNotFound</code></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../openvr_sys/enum.EVRInitError.html' title='openvr_sys::EVRInitError'>EVRInitError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1116' class='srclink' href='../src/openvr_sys/lib.rs.html#459' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../openvr_sys/enum.EVRInitError.html' title='openvr_sys::EVRInitError'>EVRInitError</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../openvr_sys/enum.EVRInitError.html' title='openvr_sys::EVRInitError'>EVRInitError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1119' class='srclink' href='../src/openvr_sys/lib.rs.html#459' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../openvr_sys/enum.EVRInitError.html' title='openvr_sys::EVRInitError'>EVRInitError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1120' class='srclink' href='../src/openvr_sys/lib.rs.html#461' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "openvr_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

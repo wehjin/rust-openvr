@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["TrackedDeviceClass","Describes the class of a tracked device"],["TrackedDeviceStringProperty","Describes a string property of a tracked device"]],"fn":[["to_tracked",""]],"struct":[["TrackedDevicePose",""],["TrackedDevicePoses",""],["TrackedDevicePosesIterator",""]]});

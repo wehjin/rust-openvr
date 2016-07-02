@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Compositor_OverlaySettings` struct in crate `openvr_sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Compositor_OverlaySettings">
+
+    <title>openvr_sys::Compositor_OverlaySettings - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>openvr_sys</a></p><script>window.sidebarCurrent = {name: 'Compositor_OverlaySettings', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>openvr_sys</a>::<wbr><a class='struct' href=''>Compositor_OverlaySettings</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-2671' class='srclink' href='../src/openvr_sys/lib.rs.html#1168-1183' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Compositor_OverlaySettings {
+    pub size: <a class='type' href='../openvr_sys/type.uint32_t.html' title='openvr_sys::uint32_t'>uint32_t</a>,
+    pub curved: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a>,
+    pub antialias: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a>,
+    pub scale: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub distance: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub alpha: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub uOffset: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub vOffset: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub uScale: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub vScale: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub gridDivs: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub gridWidth: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub gridScale: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a>,
+    pub transform: <a class='struct' href='../openvr_sys/struct.HmdMatrix44_t.html' title='openvr_sys::HmdMatrix44_t'>HmdMatrix44_t</a>,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.size' class='structfield'><code>size: <a class='type' href='../openvr_sys/type.uint32_t.html' title='openvr_sys::uint32_t'>uint32_t</a></code>
+                           </span><span class='stab '></span><span id='structfield.curved' class='structfield'><code>curved: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.antialias' class='structfield'><code>antialias: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.scale' class='structfield'><code>scale: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.distance' class='structfield'><code>distance: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.alpha' class='structfield'><code>alpha: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.uOffset' class='structfield'><code>uOffset: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.vOffset' class='structfield'><code>vOffset: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.uScale' class='structfield'><code>uScale: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.vScale' class='structfield'><code>vScale: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.gridDivs' class='structfield'><code>gridDivs: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.gridWidth' class='structfield'><code>gridWidth: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.gridScale' class='structfield'><code>gridScale: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html' title='std::os::raw::c_float'>c_float</a></code>
+                           </span><span class='stab '></span><span id='structfield.transform' class='structfield'><code>transform: <a class='struct' href='../openvr_sys/struct.HmdMatrix44_t.html' title='openvr_sys::HmdMatrix44_t'>HmdMatrix44_t</a></code>
+                           </span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../openvr_sys/struct.Compositor_OverlaySettings.html' title='openvr_sys::Compositor_OverlaySettings'>Compositor_OverlaySettings</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2634' class='srclink' href='../src/openvr_sys/lib.rs.html#1166' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../openvr_sys/struct.Compositor_OverlaySettings.html' title='openvr_sys::Compositor_OverlaySettings'>Compositor_OverlaySettings</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../openvr_sys/struct.Compositor_OverlaySettings.html' title='openvr_sys::Compositor_OverlaySettings'>Compositor_OverlaySettings</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2651' class='srclink' href='../src/openvr_sys/lib.rs.html#1166' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../openvr_sys/struct.Compositor_OverlaySettings.html' title='openvr_sys::Compositor_OverlaySettings'>Compositor_OverlaySettings</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2652' class='srclink' href='../src/openvr_sys/lib.rs.html#1167' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../openvr_sys/struct.Compositor_OverlaySettings.html' title='openvr_sys::Compositor_OverlaySettings'>Compositor_OverlaySettings</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2686' class='srclink' href='../src/openvr_sys/lib.rs.html#1184-1186' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "openvr_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
