@@ -153,19 +153,24 @@ impl IVRRenderModels {
     /// Returns the name of an available render model
     pub fn get_name(&self, index: u32) -> String {
         unsafe {
-            let models = * { self.0 as *mut openvr_sys::VR_IVRRenderModels_FnTable};
-            let name_out = String::with_capacity(256);
-
-            let size = models.GetRenderModelName.unwrap()(
-                index,
-                name_out.as_ptr() as *mut i8,
-                256
-            );
-
-            if size > 0 {
-                return String::from_raw_parts(name_out.as_ptr() as *mut _, (size - 1) as usize, (size - 1) as usize);
-            } else {
+            let models = *{ render_models.0 as *mut openvr_sys::VR_IVRRenderModels_FnTable };
+            let get_name_function = models.GetRenderModelName.unwrap();
+            let mut empty = vec![0i8;0];
+            let required = get_name_function(index, empty.as_mut_ptr(), 0);
+            if required == 0 {
                 return String::from("");
+            }
+            let mut name: Vec<u8> = Vec::with_capacity(required as usize);
+            let size = get_name_function(index, name.as_mut_ptr() as *mut i8, required);
+            if (size != required) {
+                panic!("name size changed");
+            }
+            let size_without_terminator = size - 1;
+            name.set_len(size_without_terminator as usize);
+            if let Ok(string) = CString::from_vec_unchecked(name).into_string() {
+                return string;
+            } else {
+                panic!("name cannot convert to utf8");
             }
         };
     }
@@ -219,7 +224,6 @@ impl IVRRenderModels {
                     Err(Error::from_raw(err))
                 }
             }
-
         }
     }
 }
