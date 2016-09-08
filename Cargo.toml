@@ -19,7 +19,7 @@ name = "openvr"
 path = "src/lib.rs"
 
 [dependencies]
-openvr_sys = "1.0.2"
+openvr_sys = { git = "https://github.com/wehjin/rust-openvr-sys" }
 
 [dev_dependencies]
 glium = "0.14.0"

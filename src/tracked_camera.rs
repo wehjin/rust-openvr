@@ -119,7 +119,7 @@ impl CameraFrameType {
         match self {
             &CameraFrameType::Distorted => EVRTrackedCameraFrameType_VRTrackedCameraFrameType_Distorted,
             &CameraFrameType::Undistorted => EVRTrackedCameraFrameType_VRTrackedCameraFrameType_Undistorted,
-            &CameraFrameType::MaximumUndistorted => EVRTrackedCameraFrameType_VRTrackedCameraFrameType_MaximumUndistorted ,
+            &CameraFrameType::MaximumUndistorted => EVRTrackedCameraFrameType_VRTrackedCameraFrameType_MaximumUndistorted,
             &CameraFrameType::MaximumFrameTypes => EVRTrackedCameraFrameType_MAX_CAMERA_FRAME_TYPES
         }
     }
@@ -131,16 +131,29 @@ impl IVRTrackedCamera {
     }
 
     /// checks whether the current system has a camera
+    #[cfg(not(target_os = "windows"))]
     pub fn has_camera(&self, device: &TrackedDevicePose) -> Result<bool, Error<openvr_sys::EVRTrackedCameraError>> {
         unsafe {
-            let cam = * { self.0 as *mut openvr_sys::VR_IVRTrackedCamera_FnTable };
+            let cam = *{ self.0 as *mut openvr_sys::VR_IVRTrackedCamera_FnTable };
             let mut has_cam = 0i32;
-
             let error = Error::from_raw(
                 cam.HasCamera.unwrap()(device.index as u32, &mut has_cam as *mut i32));
-
             if error.is_ok() {
                 return Ok(has_cam > 0i32);
+            } else {
+                return Err(error);
+            }
+        }
+    }
+    #[cfg(target_os = "windows")]
+    pub fn has_camera(&self, device: &TrackedDevicePose) -> Result<bool, Error<openvr_sys::EVRTrackedCameraError>> {
+        unsafe {
+            let cam = *{ self.0 as *mut openvr_sys::VR_IVRTrackedCamera_FnTable };
+            let mut has_cam = 0i8;
+            let error = Error::from_raw(
+                cam.HasCamera.unwrap()(device.index as u32, &mut has_cam as *mut i8));
+            if error.is_ok() {
+                return Ok(has_cam > 0i8);
             } else {
                 return Err(error);
             }
@@ -162,10 +175,10 @@ impl IVRTrackedCamera {
 
             let error = Error::from_raw(
                 cam.GetCameraFrameSize.unwrap()(device.index as u32,
-                                       ctype.to_raw(),
-                                       &mut result.width,
-                                       &mut result.height,
-                                       &mut result.buffer));
+                                                ctype.to_raw(),
+                                                &mut result.width,
+                                                &mut result.height,
+                                                &mut result.buffer));
 
             if error.is_ok() {
                 return Ok(result);
@@ -187,9 +200,9 @@ impl IVRTrackedCamera {
 
             let error = Error::from_raw(
                 cam.GetCameraIntrinisics.unwrap()(device.index as u32,
-                                                ctype.to_raw(),
-                                                &mut focal,
-                                                &mut center));
+                                                  ctype.to_raw(),
+                                                  &mut focal,
+                                                  &mut center));
 
             if error.is_ok() {
                 return Ok(CameraIntriniscs {
@@ -213,9 +226,9 @@ impl IVRTrackedCamera {
 
             if error.is_ok() {
                 return Ok(CameraStream {
-                            handle: handle,
-                            owner: *device
-                        });
+                    handle: handle,
+                    owner: *device
+                });
             } else {
                 return Err(error);
             }
